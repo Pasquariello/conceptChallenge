@@ -6,7 +6,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  
+
   return {
     saveLocation: (location) => {
 

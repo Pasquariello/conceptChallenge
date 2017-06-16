@@ -12,9 +12,11 @@ const Locations = (state = initialState, action) => {
         //data: locationsArray,
       });
     default:
-    console.log('missed action type');
+    console.log('missed action type for STORE_LOCATIONS');
       return state;
   }
 };
+
+
 
 export default Locations;

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import Locations from './LocationsReducer';
-//import NewLocation from './newLocationReducer';
+import MarkerLocations from './markerLocations';
 const RootReducer = combineReducers({
   Locations,
-  //newLocation: NewLocation
+  MarkerLocations
 
 });
 

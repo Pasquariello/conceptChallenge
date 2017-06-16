@@ -11,10 +11,12 @@ class App extends Component {
 
   }
   render() {
+    //have to pass in properties from dispatch to be used!
     return (
       <div className="App">
         <FormContainer />
-        <LeafletMap locations={this.props.locations} />
+
+        <LeafletMap locations={this.props.locations} markerLocations={this.props.markerLocations} />
       </div>
     );
   }
