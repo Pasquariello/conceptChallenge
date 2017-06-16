@@ -11,10 +11,7 @@ class LeafletMap extends Component {
     };
   }
   render() {
-    console.log(this.props.locations)
   const locationsArray = this.props.locations
-    console.log(locationsArray)
-
   let center = [39.750809, -104.996810];
 
   var last_element = locationsArray[locationsArray.length - 1];
@@ -28,7 +25,6 @@ class LeafletMap extends Component {
           className="map"
           zoomControl={false}
           center={center}
-          //center={[last_element.lat, last_element.lng]}
           zoom={4}
           maxBounds={[[85, 100], [-85, -280]]}
         >
@@ -48,18 +44,18 @@ class LeafletMap extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-
-  return {
-    locations: state.Locations.data,
-    newLocation: state.newLocation
-
-   }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {}
-}
+// const mapStateToProps = (state) => {
+//
+//   return {
+//     locations: state.Locations.data,
+//     newLocation: state.newLocation
+//
+//    }
+// }
+//
+// const mapDispatchToProps = (dispatch) => {
+//   return {}
+// }
 
 
 export default LeafletMap;

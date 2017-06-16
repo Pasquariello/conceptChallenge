@@ -7,6 +7,11 @@ class Form extends Component {
     this.props.saveLocation(data);
     //put data into local storage now since I do no thave server side service set up to handle yet
     let locationData = JSON.parse(localStorage.getItem('locations'))
+    //first check to see if we even have locations in local storage if not we need to set an empty array to push our
+    //locations into
+    if (!locationData){
+      locationData = []
+    }
     locationData.push(data)
     localStorage.setItem('locations', JSON.stringify(locationData))
     //clear form when done - refactor
